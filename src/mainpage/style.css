@@ -1,6 +1,6 @@
 body {
-    background-color: #BCB8B1;
-    margin: 0;
+	background-color: #263954;
+	margin: 0;
 }
 
 .navbar {
@@ -10,7 +10,7 @@ body {
 .navbar-nav .nav-link {
 	padding-top: 0.25rem;
 	padding-bottom: 0.25rem;
-    font-size: 26px;
+	font-size: 26px;
 }
 
 .navbar-nav .nav-item {
