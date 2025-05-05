@@ -3,54 +3,16 @@ body {
     margin: 0;
 }
 
-.navdiv {
-    position: absolute;
-    padding: 2rem;
-    height: 10%;
-    background-color: #8A817C;
-    width: 100%;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    border-bottom: 2px solid #463f3a70;
-    box-shadow: 0 7px 15px #463f3a70;
-}
-
 .navbar {
-    display: flex;
-    flex-direction: row;
-    width: 80%;
-    flex-wrap: nowrap;
-    justify-content: space-around;
+	min-height: 8vh;
 }
 
-.navbar a {
-    font-size: 32px;
-    text-decoration: none;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    color: #403a35;
-    transition: all 0.5s ease-out;
-	display: block;
-	position: relative;
-    height: 80%;
-    overflow: hidden;
+.navbar-nav .nav-link {
+	padding-top: 0.25rem;
+	padding-bottom: 0.25rem;
+    font-size: 26px;
 }
 
-.navbar a::after {
-	content: '';
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	height: 0.1em;
-	background-color: #c1b9ab;
-	opacity: 0;
-	transform: translate3d(-100%, 0, 0);
-	transition: opacity 300ms, transform 300ms;
-}
-
-.navbar a:hover::after,
-.navbar a:focus::after {
-	opacity: 1;
-	transform: translate3d(0, 0, 0);
+.navbar-nav .nav-item {
+	margin: 0 0.75rem;
 }
