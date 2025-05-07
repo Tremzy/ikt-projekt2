@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const navbarlist = document.getElementById("nbl");
     let navitems = navbarlist.querySelectorAll(".nav-link");
-    
+
     if (window.location.href.split("/").at(-1).replaceAll("#", "") == "") {
         history.pushState({ "index.html":"index.html" }, "", "index.html");
     }
@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
         if (item.getAttribute("href") === window.location.href.split("/").at(-1).replaceAll("#", "")) {
             item.setAttribute("aria-current", "page");
             item.classList.add("active");
-            console.log(item)
         }
         item.addEventListener("click", event => {
             event.preventDefault();
