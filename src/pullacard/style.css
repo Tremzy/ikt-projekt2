@@ -1,0 +1,58 @@
+.section-center {
+    background-color: rgba(40, 24, 212, 0.3);
+}   
+
+.szereplo {
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px black;
+    width: 100%;
+}
+
+.d1{
+    list-style-image: url(d1.png);
+}
+
+.d2{
+    list-style-image: url(d2.png);
+}
+
+.d3{
+    list-style-image: url(d3.png);
+}
+
+.d4{
+    list-style-image: url(d4.png);
+}
+
+.d5{
+    list-style-image: url(d5.png);
+}
+
+.d6{
+    list-style-image: url(d6.png);
+}
+
+h1{
+    color: black;
+    font-weight: bold;
+}
+
+body{
+    background-color: aquamarine;
+}
+
+td{
+    padding: 90px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+a{
+    background-color: rgba(137, 43, 226, 0.384);
+    border-radius: 5px;
+}
+
+.lead{
+    font-weight: bold;
+    font-size: 30px;
+}
