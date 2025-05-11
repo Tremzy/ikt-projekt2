@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
         history.pushState({ ref:"index.html" }, "", "index.html");
     }
 
+
     navitems.forEach(item => {
         if (item.getAttribute("href") === window.location.href.split("/").slice(-2).join("/")) {
             item.setAttribute("aria-current", "page");
@@ -48,19 +49,41 @@ function routePage(ref, pushHistory = true) {
             if (!res.ok) throw new Error("Page not found or inaccessible");
             return res.text();
         })
-        .then(html => {
-            const parser = new DOMParser();
-            const doc = parser.parseFromString(html, "text/html");
-            let remoteHtml = doc.getElementById("app").innerHTML;
-            
-            document.getElementById("app").innerHTML = remoteHtml;
+    .then(html => {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, "text/html");
 
-            if (pushHistory) {
-                history.pushState({ ref: "../"+ref }, "", "../"+ref);
-            }
+        const newLinks = doc.querySelectorAll('link[rel="stylesheet"]');
+        const newHref = "../" + ref.split("/").slice(0, -1).join("/") + "/style.css";
+        let existing = document.getElementById("dynamic-style");
 
-            updateActiveNavbar("../"+ref);
-        })
+        if (existing) {
+            existing.setAttribute("href", newHref);
+        }
+        else {
+            const styleLink = document.createElement("link");
+            styleLink.id = "dynamic-style";
+            styleLink.rel = "stylesheet";
+            styleLink.href = newHref;
+            document.head.appendChild(styleLink);
+            const currentLinks = document.querySelectorAll('link[rel="stylesheet"]');
+            currentLinks.forEach(cLink => {
+                const currentLinkHref = cLink.getAttribute("href");
+                if (currentLinkHref == "style.css") {
+                    cLink.rel = "alternate stylesheet";
+                }
+            })
+        }
+
+        let remoteHtml = doc.getElementById("app").innerHTML;
+        document.getElementById("app").innerHTML = remoteHtml;
+
+        if (pushHistory) {
+            history.pushState({ ref: "../"+ref }, "", "../"+ref);
+        }
+
+        updateActiveNavbar("../"+ref);
+    })
         .catch(err => {
             console.error(err);
             document.getElementById("app").innerHTML = "<h1>404 - Page not found</h1>";
