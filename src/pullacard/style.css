@@ -1,3 +1,22 @@
+body {
+	background-color: #263954;
+	margin: 0;
+}
+
+.navbar {
+	min-height: 8vh;
+}
+
+.navbar-nav .nav-link {
+	padding-top: 0.25rem;
+	padding-bottom: 0.25rem;
+	font-size: 26px;
+}
+
+.navbar-nav .nav-item {
+	margin: 0 0.75rem;
+}
+
 .section-center {
     background-color: rgba(40, 24, 212, 0.3);
 }   
@@ -47,7 +66,7 @@ td{
     font-weight: bold;
 }
 
-a{
+#app a{
     background-color: rgba(137, 43, 226, 0.384);
     border-radius: 5px;
 }
