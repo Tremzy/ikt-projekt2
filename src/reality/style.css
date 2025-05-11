@@ -1,0 +1,63 @@
+body {
+    background-color: #263954;
+    margin: 0;
+}
+
+.navbar {
+    min-height: 8vh;
+}
+
+.navbar-nav .nav-link {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    font-size: 26px;
+}
+
+.navbar-nav .nav-item {
+    margin: 0 0.75rem;
+}
+
+
+#app {
+    margin-bottom: 60px;
+}
+
+ul {
+    list-style-type: square;
+}
+
+.troli {
+    background-image: url('img/troli.png');
+    background-repeat: no-repeat;
+    padding-right: 20px;
+    background-size: 15px;
+    background-position: right;
+    color: red;
+}
+
+.metro {
+    background-image: url('img/metro.jpg');
+    background-repeat: no-repeat;
+    padding-right: 20px;
+    background-size: 15px;
+    background-position: right;
+    color: grey;
+}
+
+.villamos {
+    background-image: url('img/villamos.png');
+    background-repeat: no-repeat;
+    padding-right: 20px;
+    background-size: 15px;
+    background-position: right;
+    color: yellow;
+}
+
+.volan {
+    background-image: url('img/volan.png');
+    background-repeat: no-repeat;
+    padding-right: 20px;
+    background-size: 15px;
+    background-position: right;
+    color: orange;
+}
