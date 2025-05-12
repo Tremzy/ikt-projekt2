@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="../routing.js"></script>
+    <title>NVÚH - valóság</title>
+</head>
+<body>
+    <header>
+        <!--nem a hivatal!!!-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="mainNavbar">
+                    <ul class="navbar-nav mb-2 mb-lg-0 nav-underline" id="nbl">
+                        <li class="nav-item">
+                            <a class="nav-link" href="description/description.html">Leírás</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pullacard/pullacard.html">Húzz egy kártyát</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="mainpage/index.html">Főoldal</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="reality/reality.html">A valóság</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="rules/rules.html">Szabályok</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container-fluid">
+        <div id="app">
+            <div class="container py-5 text-light">
+                <div class="text-center mb-5">
+                    <h1 class="display-4 fw-bold">Norbi varázslatos útja haza</h1>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-12">
+                        <div class="card bg-dark border-secondary shadow">
+                            <div class="card-body">
+                                <h3 class="card-title p-2 bg-primary rounded-1 col-4 text-light mb-3">Alap szabályok: </h3>
+                                <p class="card-text text-light col-10 ms-4 fs-5">
+                                    <ul class="card-text text-light rulesul">
+                                        <li>Dobókockával dobsz, amennyit dobsz, annyit lépsz.</li>
+                                        <li>Állomásonként kell venni jegyet, ha nincs pénzed jegyre, akkor menj a másik úton (zöld út), ameddig nem lesz jegyed. Ha van jegyed, menj tovább az eredeti úton a következő állomásra.</li>
+                                        <li>Jegyet a bolt mezőn és az állomáson vehetsz.</li>
+                                        <li>Amint a cél mezőbe érsz, nyersz.</li>
+                                        <li>Akinek a neve a legközelebb van az „N” betűhöz (mert Norbi) az kezd, és így állítjuk be a további játékos sorrendjét.</li>
+                                        <li>Mindenki 5 disznóval kezd.</li>
+                                        <li>Maximum 5-en lehet játszani.</li>
+                                    </ul>
+                                </p>
+
+                                <h3 class="card-title p-2 bg-primary rounded-1 col-4 text-light mb-3 mt-5 ">Mezők: </h3>
+                                <p class="card-text text-light col-10 ms-4 fs-5">
+                                    <ul class="card-text text-light">
+                                        <li>Fehér-semmi nem történik</li>
+                                        <li>Kék -húzz 1 kártyát (Dobókockával dobsz és leolvasod a listáról, hogy az minek felel meg)</li>
+                                        <li>Lila -Dobj újra</li>
+                                        <li>Rózsaszín - késik a járatod (kimaradsz egy körből)</li>
+                                        <li>Barna -megtámadtak (mínusz 3 disznó)</li>
+                                        <li>Narancssárga - Kapsz ösztöndíjat (plusz 2 disznó)</li>
+                                        <li>Zöld - találtál egy  1 disznót</li>
+                                        <li>Piros - bolt mező</li>
+                                    </ul>
+                                </p>
+
+                                <h3 class="card-title p-2 bg-primary rounded-1 col-4 text-light mb-3 mt-5 ">Pénz költési lehetőségek </h3>
+                                <p class="card-text text-light col-10 ms-4 fs-5">
+                                    <ul class="card-text text-light">
+                                        <li>Jegy - 2 disznó</li>
+                                        <li>Red Bull (átfut 3 mezőt) -2 disznó</li>
+                                        <li>Autó (bárhol állsz, a következő állomásig elvisz) – 4 disznó</li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer col-12 fixed-bottom bg-dark">
+                <div class="text-center fs-4 text-light my-4">
+                    <p>Copyright &copy; 2025 - IKTPROJ2. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="../bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>
